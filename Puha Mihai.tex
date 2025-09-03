@@ -1,0 +1,145 @@
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+\usepackage{xcolor}
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+\usepackage{paracol}
+
+\ifxetexorluatex
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\input{pubs-authoryear}
+
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{PUHA MIHAI}
+\photoR{3cm}{MihaiPuha.jpg}
+
+\personalinfo{%
+  \email{puha.mihai97@gmail.com}
+  \phone{+40742308390}
+  \linkedin{mihai-puha}
+}
+
+\makecvheader
+
+\columnratio{0.6}
+
+\begin{paracol}{2}
+\cvsection{PROFESSIONAL EXPERIENCE}
+
+\cvevent{DevOps and Automation Engineer}{8x8}{June 2023 -- Ongoing}
+{Bucharest/Remote}
+\begin{itemize}
+\item Automating the creation and configuration of KVM and VMware hypervisor (OLVM, vSphere) through a GitOps pipeline
+\item Contributing to different open source project: ovirt-terraform-provider(Go), gluster-exporter, phpipam/helm-chart
+\item Deploying and managing K8s, microk8s clusters using Ansible, Terraform 
+\item Migrating multiple monolithic applications to k8s (Ansible Tower, phpipam, Atlantis) using HelmCharts, ArgoCD, GitActions
+\item Automating entire Infrastructure monitoring using Grafana \newline Observability stack
+\item Working with different storage classes: RockCeph, GlusterFS, Pure
+\item Cloud Operations within AWS and OCI
+\item Automating deployment configuration and maintenance of Load Balancer services (F5, Citrix, HAProxy) and DNS (PDNS, Bind)
+\item Automating Infrastructure various tasks using Ansible and Python
+\end{itemize}
+\divider
+\cvevent{DevOps Engineer}{Luxoft}{May 2022 -- June 2023}{Bucharest}
+\begin{itemize}
+\item Containerizing and deploying a C++ applications using Docker, Helm Charts and K8s
+\item Cloud Operations within AWS
+\item Automating internal test tasks using Python
+\item Jenkins administration and pipeline development (GitHub, \newline Harbor, JFrog)
+\item Creating, maintaining and monitoring RedHat Pacemaker \newline Clusters using Ansible and Grafana Stack
+\end{itemize}
+
+\divider
+
+\cvevent{Junior DevOps Engineer}{emia.com}{June 2020 -- May 2022}{Bucharest}
+\begin{itemize}
+\item Automating network workflows using Python and Ansible playbooks. Automation/configuration of BGP/OSFP (Bird, Quagga)
+\item Developing and integrating an internal Rest API using Fast API 
+\item Automating configuration of network GRE, IP/IP tunnels, \newline DNS/rDNS, firewalls
+\item Working with virtualization systems (Proxmox, VMWare) and network monitoring solutions (Zabbix, Nagios);
+\end{itemize}
+
+\divider
+
+\medskip
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{Education}
+
+\cvevent{\mbox{Bachelor's Degree in Systems Engineering}}{Faculty of Automatic Control and Computer Science, University Politehnica of Bucharest}{Sept 2017 -- June 2021}{}
+
+\cvevent{High School Diploma \newline Mathematics and Computer Science}{Dinicu Golescu National College, Campulung, Romania}{Sept 2013 -- June 2017}{}
+
+\cvsection{EXTRACURRICULAR \newline ACTIVITIES}
+\begin{itemize}
+
+\item {\textbf{Undergraduate Teaching Assistant} \newline Object Oriented Programming course, Faculty of Automatic Control and Computer Science, Politehnica University of Bucharest} {(September 2019 - January 2020)}
+\item {\textbf{Undergraduate Teaching Assistant} \newline Computer Programming course, Faculty of Applied Sciences , Politehnica University of Bucharest} {(September 2019 - January 2020)}
+\end{itemize}
+\medskip
+
+\cvsection{TECHNICAL SKILLS}
+\cvtag{Python}
+\cvtag{CCNA1}
+\cvtag{CCNA2}
+\cvtag{Docker}
+\cvtag{OCI Certified Foundation Associate}
+\cvtag{k8s}
+\cvtag{HelmChart}
+\cvtag{Terraform}
+\cvtag{Ansible}
+
+\cvsection{SIDE PROJECTS}
+\begin{itemize}
+\item BareMetal Servers (Dell, Supermicro) \newline Installation
+\item Basic configuration for Networking (Cisco Switches), Firewall (Fortinet/Forcepoint)
+\item OLVM Deployment, VMs creation
+\item Deploying, configuring and maintaining GitLab
+\item Containerizing and deploying a React \newline Application using Docker and Docker Compose
+\item Creating PostgreSQL clusters
+\end{itemize}
+
+
+
+
+
+
+\end{paracol}
+
+
+\end{document}
+
