@@ -42,12 +42,12 @@
 
 \begin{document}
 \name{PUHA MIHAI}
-\photoR{3cm}{MihaiPuha.jpg}
+\photoR{3cm}{Mihai Profile Picture GI Croped.jpg}
 
 \personalinfo{%
   \email{puha.mihai97@gmail.com}
-  \phone{+40742308390}
   \linkedin{mihai-puha}
+  \address{Weihermattstrasse 11, 4102 Binningen}
 }
 
 \makecvheader
@@ -58,7 +58,7 @@
 \cvsection{PROFESSIONAL EXPERIENCE}
 
 \cvevent{DevOps and Automation Engineer}{8x8}{June 2023 -- Ongoing}
-{Bucharest/Remote}
+{Remote}
 \begin{itemize}
 \item Automating the creation and configuration of KVM and VMware hypervisor (OLVM, vSphere) through a GitOps pipeline
 \item Contributing to different open source project: ovirt-terraform-provider(Go), gluster-exporter, phpipam/helm-chart
@@ -127,58 +127,44 @@
 \cvsection{Interests}
 Outside of work, I keep myself fit and healthy while practicing jiu jitsu, running, and lifting weights. I enjoy watching movies and documentaries (especially Animal Planet). In addition to all this, I am very passionate about exploring quality cuisine.
 
+\cvsection{Languages}
+{\small
+\begin{itemize}
+  \item Romanian – Mother Language
+  \item English – Advanced (non-native)
+  \item Russian – Native level proficiency
+\end{itemize}
+}
+
+
 \end{paracol}
 \newpage
 
 \cvsection{Side Projects}
-
-\cvevent{VM Cluster with oVirt and Ceph}{Personal Project}{}{Ongoing}
-\begin{itemize}
-  \item Built from scratch a VM cluster running the oVirt hypervisor on bare metal servers, using Ceph as backend storage.
-  \item Performed all tasks end-to-end: hardware racking, OS installation, networking, storage configuration, and VM lifecycle automation.
-  \item Automated VM creation and configuration via Ansible and Terraform, ensuring reproducibility and scalability.
-\end{itemize}
+\cvevent{Cloud Migration of Monolithic Application}{}{}{}
+Planned and executed migration of a large on-premise monolithic application to the cloud. Designed a hybrid architecture with VMs, Kubernetes clusters, storage, and networking, balancing cost and scalability. Kept the on-premise test environment operational, sharing DNS through LMDB Lightstream technology without split-brain issues. Delivered a working hybrid environment with production in cloud and testing in datacenter.
 \divider
 
-\cvevent{OpenStack Cluster with Monitoring}{Personal Project}{}{Ongoing}
-\begin{itemize}
-  \item Deployed and configured an OpenStack cluster on bare metal servers with Ceph as the storage backend.
-  \item Integrated observability using Grafana, Loki, and Prometheus, providing real-time monitoring of compute, network, and storage nodes.
-  \item Implemented alerting pipelines to Microsoft Teams for proactive incident response.
-\end{itemize}
+\cvevent{VM Cluster with oVirt and Ceph}{}{}{}
+Built from scratch a VM cluster running the oVirt hypervisor on bare metal servers, using Ceph as backend storage. Performed all tasks end-to-end: hardware racking, OS installation, networking, storage configuration, and VM lifecycle automation. Automated VM creation and configuration via Ansible and Terraform, ensuring reproducibility and scalability.
 \divider
 
-\cvevent{Self-Hosted GitLab with Runners}{Personal Project}{}{Ongoing}
-\begin{itemize}
-  \item Installed and maintain a self-hosted GitLab instance for personal and team projects.
-  \item Designed CI/CD pipelines with GitLab CI, integrating Kubernetes-based self-hosted runners.
-  \item Enabled dynamic scaling of runners within the Kubernetes cluster, improving efficiency for parallel builds.
-\end{itemize}
+\cvevent{OpenStack Cluster with Monitoring}{}{}{}
+Deployed and configured an OpenStack cluster on bare metal servers with Ceph as the storage backend. Integrated observability using Grafana, Loki, and Prometheus, providing real-time monitoring of compute, network, and storage nodes. Implemented alerting pipelines to Microsoft Teams for proactive incident response.
 \divider
 
-\cvevent{Cloudflare Protection}{Personal Project}{}{Ongoing}
-\begin{itemize}
-  \item Secured core infrastructure by migrating public-facing services behind Cloudflare.
-  \item Configured DDoS protection, WAF, and caching policies to mitigate attacks and improve performance.
-  \item Validated setup by simulating stress traffic and ensuring zero downtime.
-\end{itemize}
+\cvevent{Self-Hosted GitLab with Runners}{}{}{}
+Installed and maintain a self-hosted GitLab instance for personal and team projects. Designed CI/CD pipelines with GitLab CI, integrating Kubernetes-based self-hosted runners. Enabled dynamic scaling of runners within the Kubernetes cluster, improving efficiency for parallel builds.
 \divider
 
-\cvevent{Cloud Migration of Monolithic Application}{Personal Project}{}{Ongoing}
-\begin{itemize}
-  \item Planned and executed migration of a large on-premise monolithic application to the cloud.
-  \item Designed a hybrid architecture with VMs, Kubernetes clusters, storage, and networking, balancing cost and scalability.
-  \item Kept the on-premise test environment operational, sharing DNS through LMDB Lightstream technology without split-brain issues.
-  \item Delivered a working hybrid environment with production in cloud and testing in datacenter.
-\end{itemize}
+\cvevent{Cloudflare Protection}{}{}{}
+Secured core infrastructure by migrating public-facing services behind Cloudflare. Configured DDoS protection, WAF, and caching policies to mitigate attacks and improve performance. Validated setup by simulating stress traffic and ensuring zero downtime.
 \divider
 
-\cvevent{RO Fishing Activities API Migration}{Personal Project}{}{Ongoing}
-\begin{itemize}
-  \item Migrated the Romanian Fishing Activities API from legacy stack to a new implementation with FastAPI.
-  \item Improved performance, maintainability, and API documentation with OpenAPI standards.
-  \item Ensured backward compatibility for client systems while modernizing the codebase.
-\end{itemize}
+
+\cvevent{RO Fishing Activities API Migration}{}{}{}
+Migrated the Romanian Fishing Activities API from legacy stack to a new implementation with FastAPI. Improved API performance, maintainability, and documentation with OpenAPI standards. Ensured backward compatibility for client systems while modernizing the codebase.
+
 
 
 
