@@ -1,0 +1,187 @@
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+\usepackage{xcolor}
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+\usepackage{paracol}
+
+\ifxetexorluatex
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\input{pubs-authoryear}
+
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{PUHA MIHAI}
+\photoR{3cm}{MihaiPuha.jpg}
+
+\personalinfo{%
+  \email{puha.mihai97@gmail.com}
+  \phone{+40742308390}
+  \linkedin{mihai-puha}
+}
+
+\makecvheader
+
+\columnratio{0.6}
+
+\begin{paracol}{2}
+\cvsection{PROFESSIONAL EXPERIENCE}
+
+\cvevent{DevOps and Automation Engineer}{8x8}{June 2023 -- Ongoing}
+{Bucharest/Remote}
+\begin{itemize}
+\item Automating the creation and configuration of KVM and VMware hypervisor (OLVM, vSphere) through a GitOps pipeline
+\item Contributing to different open source project: ovirt-terraform-provider(Go), gluster-exporter, phpipam/helm-chart
+\item Deploying and managing K8s, microk8s clusters using Ansible, Terraform 
+\item Migrating multiple monolithic applications to k8s (Ansible Tower, phpipam, Atlantis) using HelmCharts, ArgoCD, GitActions
+\item Automating entire Infrastructure monitoring using Grafana \newline Observability stack
+\item Working with different storage classes: RockCeph, GlusterFS, Pure
+\item Cloud Operations within AWS and OCI
+\item Automating deployment configuration and maintenance of Load Balancer services (F5, Citrix, HAProxy) and DNS (PDNS, Bind)
+\item Automating Infrastructure various tasks using Ansible and Python
+\end{itemize}
+\divider
+\cvevent{DevOps Engineer}{Luxoft}{May 2022 -- June 2023}{Bucharest}
+\begin{itemize}
+\item Containerizing and deploying a C++ applications using Docker, Helm Charts and K8s
+\item Cloud Operations within AWS
+\item Automating internal test tasks using Python
+\item Jenkins administration and pipeline development (GitHub, \newline Harbor, JFrog)
+\item Creating, maintaining and monitoring RedHat Pacemaker \newline Clusters using Ansible and Grafana Stack
+\end{itemize}
+
+\divider
+
+\cvevent{Junior DevOps Engineer}{emia.com}{June 2020 -- May 2022}{Bucharest}
+\begin{itemize}
+\item Automating network workflows using Python and Ansible playbooks. Automation/configuration of BGP/OSFP (Bird, Quagga)
+\item Developing and integrating an internal Rest API using Fast API 
+\item Automating configuration of network GRE, IP/IP tunnels, \newline DNS/rDNS, firewalls
+\item Working with virtualization systems (Proxmox, VMWare) and network monitoring solutions (Zabbix, Nagios);
+\end{itemize}
+
+\divider
+
+\medskip
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{Education}
+
+\cvevent{\mbox{Bachelor's Degree in Systems Engineering}}{Faculty of Automatic Control and Computer Science, University Politehnica of Bucharest}{Sept 2017 -- June 2021}{}
+
+\cvevent{High School Diploma \newline Mathematics and Computer Science}{Dinicu Golescu National College, Campulung, Romania}{Sept 2013 -- June 2017}{}
+
+\cvsection{EXTRACURRICULAR \newline ACTIVITIES}
+\begin{itemize}
+
+\item {\textbf{Undergraduate Teaching Assistant} \newline Object Oriented Programming course, Faculty of Automatic Control and Computer Science, Politehnica University of Bucharest} {(September 2019 - January 2020)}
+\item {\textbf{Undergraduate Teaching Assistant} \newline Computer Programming course, Faculty of Applied Sciences , Politehnica University of Bucharest} {(September 2019 - January 2020)}
+\end{itemize}
+\medskip
+
+\cvsection{TECHNICAL SKILLS}
+\cvtag{Python}
+\cvtag{Go}
+\cvtag{CCNA1}
+\cvtag{CCNA2}
+\cvtag{Docker}
+\cvtag{OCI Certified Foundation Associate}
+\cvtag{k8s}
+\cvtag{HelmChart}
+\cvtag{Terraform}
+\cvtag{Ansible}
+
+\cvsection{Interests}
+Outside of work, I keep myself fit and healthy while practicing jiu jitsu, running, and lifting weights. I enjoy watching movies and documentaries (especially Animal Planet). In addition to all this, I am very passionate about exploring quality cuisine.
+
+\end{paracol}
+\newpage
+
+\cvsection{Side Projects}
+
+\cvevent{VM Cluster with oVirt and Ceph}{Personal Project}{}{Ongoing}
+\begin{itemize}
+  \item Built from scratch a VM cluster running the oVirt hypervisor on bare metal servers, using Ceph as backend storage.
+  \item Performed all tasks end-to-end: hardware racking, OS installation, networking, storage configuration, and VM lifecycle automation.
+  \item Automated VM creation and configuration via Ansible and Terraform, ensuring reproducibility and scalability.
+\end{itemize}
+\divider
+
+\cvevent{OpenStack Cluster with Monitoring}{Personal Project}{}{Ongoing}
+\begin{itemize}
+  \item Deployed and configured an OpenStack cluster on bare metal servers with Ceph as the storage backend.
+  \item Integrated observability using Grafana, Loki, and Prometheus, providing real-time monitoring of compute, network, and storage nodes.
+  \item Implemented alerting pipelines to Microsoft Teams for proactive incident response.
+\end{itemize}
+\divider
+
+\cvevent{Self-Hosted GitLab with Runners}{Personal Project}{}{Ongoing}
+\begin{itemize}
+  \item Installed and maintain a self-hosted GitLab instance for personal and team projects.
+  \item Designed CI/CD pipelines with GitLab CI, integrating Kubernetes-based self-hosted runners.
+  \item Enabled dynamic scaling of runners within the Kubernetes cluster, improving efficiency for parallel builds.
+\end{itemize}
+\divider
+
+\cvevent{Cloudflare Protection}{Personal Project}{}{Ongoing}
+\begin{itemize}
+  \item Secured core infrastructure by migrating public-facing services behind Cloudflare.
+  \item Configured DDoS protection, WAF, and caching policies to mitigate attacks and improve performance.
+  \item Validated setup by simulating stress traffic and ensuring zero downtime.
+\end{itemize}
+\divider
+
+\cvevent{Cloud Migration of Monolithic Application}{Personal Project}{}{Ongoing}
+\begin{itemize}
+  \item Planned and executed migration of a large on-premise monolithic application to the cloud.
+  \item Designed a hybrid architecture with VMs, Kubernetes clusters, storage, and networking, balancing cost and scalability.
+  \item Kept the on-premise test environment operational, sharing DNS through LMDB Lightstream technology without split-brain issues.
+  \item Delivered a working hybrid environment with production in cloud and testing in datacenter.
+\end{itemize}
+\divider
+
+\cvevent{RO Fishing Activities API Migration}{Personal Project}{}{Ongoing}
+\begin{itemize}
+  \item Migrated the Romanian Fishing Activities API from legacy stack to a new implementation with FastAPI.
+  \item Improved performance, maintainability, and API documentation with OpenAPI standards.
+  \item Ensured backward compatibility for client systems while modernizing the codebase.
+\end{itemize}
+
+
+
+
+\end{document}
+
