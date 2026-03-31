@@ -42,12 +42,12 @@
 
 \begin{document}
 \name{PUHA MIHAI}
-\photoR{3cm}{MihaiPuha.jpg}
+\photoR{3cm}{Mihai Profile Picture GI Croped.jpg}
 
 \personalinfo{%
   \email{puha.mihai97@gmail.com}
-  \phone{+40742308390}
   \linkedin{mihai-puha}
+  \address{Bucharest}
 }
 
 \makecvheader
@@ -58,11 +58,11 @@
 \cvsection{PROFESSIONAL EXPERIENCE}
 
 \cvevent{DevOps and Automation Engineer}{8x8}{June 2023 -- Ongoing}
-{Bucharest/Remote}
+{Remote}
 \begin{itemize}
 \item Automating the creation and configuration of KVM and VMware hypervisor (OLVM, vSphere) through a GitOps pipeline
-\item Contributing to different open source project: ovirt-terraform-provider(Go), gluster-exporter, phpipam/helm-chart
-\item Deploying and managing K8s, microk8s clusters using Ansible, Terraform 
+\item Small contributions to different open source project: ovirt-terraform-provider(Go), gluster-exporter, phpipam/helm-chart
+\item Deploying and managing K8s, microk8s clusters using Ansible, Terraform
 \item Migrating multiple monolithic applications to k8s (Ansible Tower, phpipam, Atlantis) using HelmCharts, ArgoCD, GitActions
 \item Automating entire Infrastructure monitoring using Grafana \newline Observability stack
 \item Working with different storage classes: RockCeph, GlusterFS, Pure
@@ -85,7 +85,7 @@
 \cvevent{Junior DevOps Engineer}{emia.com}{June 2020 -- May 2022}{Bucharest}
 \begin{itemize}
 \item Automating network workflows using Python and Ansible playbooks. Automation/configuration of BGP/OSFP (Bird, Quagga)
-\item Developing and integrating an internal Rest API using Fast API 
+\item Developing and integrating an internal Rest API using Fast API
 \item Automating configuration of network GRE, IP/IP tunnels, \newline DNS/rDNS, firewalls
 \item Working with virtualization systems (Proxmox, VMWare) and network monitoring solutions (Zabbix, Nagios);
 \end{itemize}
@@ -114,6 +114,7 @@
 
 \cvsection{TECHNICAL SKILLS}
 \cvtag{Python}
+\cvtag{Go}
 \cvtag{CCNA1}
 \cvtag{CCNA2}
 \cvtag{Docker}
@@ -123,23 +124,72 @@
 \cvtag{Terraform}
 \cvtag{Ansible}
 
-\cvsection{SIDE PROJECTS}
+\cvsection{Interests}
+Outside of work, I keep myself fit and healthy while practicing jiu jitsu, running, and lifting weights. I enjoy watching movies and documentaries (especially Animal Planet). In addition to all this, I am very passionate about exploring quality cuisine.
+
+\cvsection{Languages}
+{\small
 \begin{itemize}
-\item BareMetal Servers (Dell, Supermicro) \newline Installation
-\item Basic configuration for Networking (Cisco Switches), Firewall (Fortinet/Forcepoint)
-\item OLVM Deployment, VMs creation
-\item Deploying, configuring and maintaining GitLab
-\item Containerizing and deploying a React \newline Application using Docker and Docker Compose
-\item Creating PostgreSQL clusters
+  \item Romanian – Mother Language
+  \item English – Advanced (non-native)
+  \item Russian – Native level proficiency
 \end{itemize}
-
-
-
-
+}
 
 
 \end{paracol}
+\newpage
+
+\cvsection{Side Projects}
+\cvevent{Cloud Migration of Monolithic Application}{}{}{}
+Planned and executed migration of a large on-premise monolithic application to the cloud. Designed a hybrid architecture with VMs, Kubernetes clusters, storage, and networking, balancing cost and scalability. Kept the on-premise test environment operational, sharing DNS through LMDB Lightstream technology without split-brain issues. Delivered a working hybrid environment with production in cloud and testing in datacenter.
+
+
+\cvevent{VM Cluster with oVirt and Ceph}{}{}{}
+Built from scratch a VM cluster running the oVirt hypervisor on bare metal servers, using Ceph as backend storage. Performed all tasks end-to-end: hardware racking, OS installation, networking, storage configuration, and VM lifecycle automation. Automated VM creation and configuration via Ansible and Terraform, ensuring reproducibility and scalability.
+
+
+\cvevent{OpenStack Cluster with Monitoring}{}{}{}
+Deployed and configured an OpenStack cluster on bare metal servers with Ceph as the storage backend. Integrated observability using Grafana, Loki, and Prometheus, providing real-time monitoring of compute, network, and storage nodes. Implemented alerting pipelines to Microsoft Teams for proactive incident response.
+
+
+\cvevent{Self-Hosted GitLab with Runners}{}{}{}
+Installed and maintain a self-hosted GitLab instance for personal and team projects. Designed CI/CD pipelines with GitLab CI, integrating Kubernetes-based self-hosted runners. Enabled dynamic scaling of runners within the Kubernetes cluster, improving efficiency for parallel builds.
+
+
+\cvevent{Self-Hosted Hashicorp Vault}{}{}{}
+Installed and maintained a self-hosted Hashicorp Vault instance for internal usage - automated  monitoring and user creation.
+
+
+\cvevent{Cloudflare Protection}{}{}{}
+Secured core infrastructure by migrating public-facing services behind Cloudflare. Configured DDoS protection, WAF, and caching policies to mitigate attacks and improve performance. Validated setup by simulating stress traffic and ensuring zero downtime.
+
+
+\cvevent{Forcepoint NGFW}{}{}{}
+Implemented Forcepoint Appliance for enterprise security, including deployment and configuration of DLP and Web Security modules. Installed and configured security agents on remote organization laptops to ensure policy enforcement, data protection, and safe web access across the workforce.
+
+
+\cvevent{RO Fishing Activities API Migration}{}{}{}
+Migrated the Romanian Fishing Activities API from legacy stack to a new implementation with FastAPI. Improved API performance, maintainability, and documentation with OpenAPI standards. Ensured backward compatibility for client systems while modernizing the codebase.
+
+
+\cvsection{Open Source Projects}
+
+\cvevent{oVirt MCP Server \normalfont{| \textcolor{PastelRed}{Python} | \href{https://github.com/puhamihai/ovirt-mcp-server}{}}}{}{}{}
+An MCP (Model Context Protocol) server for managing oVirt/RHV virtualization environments via AI assistants such as Claude. Enables querying and performing power operations on virtual machines through natural language.
+
+\cvevent{x509 Certificate Exporter Role \normalfont{| \textcolor{PastelRed}{Ansible} | \href{https://github.com/puhamihai/x509_certificate_exporter}{}}}{}{}{}
+Ansible role for deploying the x509-certificate-exporter Prometheus exporter. Monitors certificate expiration from files, directories, kubeconfig files, and Kubernetes secrets.
+
+\cvevent{oVirt Ansible Utils \normalfont{| \textcolor{PastelRed}{Ansible} | \href{https://github.com/puhamihai/ovirt-ansible-utils}{}}}{}{}{}
+Collection of Ansible playbooks for oVirt administration tasks, including automated certificate renewal for oVirt Engine.
+
+\cvevent{oVirt Terraform Provider \normalfont{| \textcolor{PastelRed}{Terraform} | \href{https://github.com/puhamihai/terraform-provider-ovirt}{}}}{}{}{}
+Terraform provider for oVirt administration tasks.
+
+
+\cvsection{AI \& Automation Interests}
+Passionate about integrating AI agents with infrastructure through MCP (Model Context Protocol) servers, enabling natural language interaction with complex systems such as virtualization platforms and monitoring stacks. Currently working on building a smart home system that leverages speech-to-text and text-to-speech technologies to allow seamless voice-based interaction with AI agents -- enabling hands-free control, querying, and automation of home devices and services through natural conversation.
 
 
 \end{document}
-
