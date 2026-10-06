@@ -1,0 +1,200 @@
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+\usepackage{xcolor}
+\geometry{left=1.1cm,right=1.1cm,top=1cm,bottom=1cm,columnsep=1cm}
+
+\usepackage{paracol}
+
+\ifxetexorluatex
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\Large\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% Tighter vertical rhythm so the full content fits in three pages.
+%% The patches fail silently on altacv versions with different internals.
+\usepackage{etoolbox}
+\setlist{leftmargin=*,labelsep=0.5em,nosep,itemsep=0.15\baselineskip,after=\smallskip}
+\patchcmd{\cvsection}{\bigskip}{\medskip}{}{}
+\patchcmd{\cvevent}{\medskip\normalsize}{\smallskip\normalsize}{}{}
+
+\input{pubs-authoryear}
+
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{PUHA MIHAI}
+\photoR{2.5cm}{Mihai Profile Picture GI Croped.jpg}
+
+\personalinfo{%
+  \email{puha.mihai97@gmail.com}
+  \linkedin{mihai-puha}
+  \address{Bucharest}
+}
+
+\makecvheader
+
+\columnratio{0.6}
+
+\begin{paracol}{2}
+\cvsection{PROFESSIONAL EXPERIENCE}
+
+\cvevent{DevOps and Automation Engineer}{8x8}{June 2023 -- Ongoing}
+{Remote}
+\begin{itemize}
+\item Automating creation and configuration of KVM and VMware hypervisors (OLVM, vSphere) through a GitOps pipeline
+\item Deploying and managing K8s and microk8s clusters with Ansible and Terraform
+\item Migrating monolithic applications to K8s (Ansible Tower, phpIPAM, Atlantis) using Helm charts, ArgoCD and GitHub Actions
+\item Automating infrastructure monitoring end to end with the Grafana observability stack
+\item Working with multiple storage backends: Rook Ceph, GlusterFS, Pure Storage
+\item Cloud operations in AWS and OCI
+\item Automating deployment and maintenance of load balancing (F5, Citrix, HAProxy) and DNS services (PowerDNS, Bind)
+\item Automating various infrastructure tasks with Ansible and Python
+\end{itemize}
+\divider
+\cvevent{DevOps Engineer}{Luxoft}{May 2022 -- June 2023}{Bucharest}
+\begin{itemize}
+\item Containerizing and deploying C++ applications using Docker, Helm Charts and K8s
+\item Cloud Operations within AWS
+\item Automating internal test tasks using Python
+\item Jenkins administration and pipeline development (GitHub, Harbor, JFrog)
+\item Creating, maintaining and monitoring RedHat Pacemaker clusters using Ansible and Grafana Stack
+\end{itemize}
+
+\divider
+
+\cvevent{Junior DevOps Engineer}{emia.com}{June 2020 -- May 2022}{Bucharest}
+\begin{itemize}
+\item Automating network workflows using Python and Ansible playbooks. Automation/configuration of BGP/OSPF (Bird, Quagga)
+\item Developing and integrating an internal Rest API using Fast API
+\item Automating configuration of network GRE and IP/IP tunnels, DNS and rDNS, firewalls
+\item Working with virtualization systems (Proxmox, VMWare) and network monitoring solutions (Zabbix, Nagios);
+\end{itemize}
+
+\divider
+
+\medskip
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{Education}
+
+\cvevent{Bachelor's Degree in Systems Engineering}{Faculty of Automatic Control and Computer Science, University Politehnica of Bucharest}{Sept 2017 -- June 2021}{}
+
+\cvevent{High School Diploma \newline Mathematics and Computer Science}{Dinicu Golescu National College, Campulung, Romania}{Sept 2013 -- June 2017}{}
+
+\cvsection{EXTRACURRICULAR \newline ACTIVITIES}
+\begin{itemize}
+
+\item {\textbf{Undergraduate Teaching Assistant} \newline Object Oriented Programming course, Faculty of Automatic Control and Computer Science, Politehnica University of Bucharest} {(September 2019 - January 2020)}
+\item {\textbf{Undergraduate Teaching Assistant} \newline Computer Programming course, Faculty of Applied Sciences , Politehnica University of Bucharest} {(September 2019 - January 2020)}
+\end{itemize}
+\medskip
+
+\cvsection{TECHNICAL SKILLS}
+{\emergencystretch=3em
+\cvtag{Python}
+\cvtag{Go}
+\cvtag{CCNA1}
+\cvtag{CCNA2}
+\cvtag{Docker}
+\cvtag{OCI Foundations Associate}
+\cvtag{k8s}
+\cvtag{HelmChart}
+\cvtag{Terraform}
+\cvtag{Ansible}
+\cvtag{MCP}
+\cvtag{PostgreSQL}
+\cvtag{TimescaleDB}
+\cvtag{Airflow}
+\cvtag{FastAPI}
+\cvtag{Grafana}
+\par}
+
+\cvsection{Interests}
+Outside of work, I keep myself fit and healthy while practicing jiu jitsu, running, and lifting weights. I enjoy watching movies and documentaries (especially Animal Planet). In addition to all this, I am very passionate about exploring quality cuisine.
+
+\cvsection{Languages}
+{\small
+\begin{itemize}
+  \item Romanian – Mother Language
+  \item English – Advanced (non-native)
+  \item Russian – Native level proficiency
+\end{itemize}
+}
+
+
+\end{paracol}
+\newpage
+
+\cvsection{Key Projects}
+
+\cvevent{ANCOM PMON: National RF Spectrum Monitoring Platform \normalfont{| \textcolor{PastelRed}{Lead Engineer}}}{}{}{}
+Lead engineer on the platform Romania's telecom regulator uses to monitor the national radio spectrum, covering infrastructure, architecture and operations.
+\begin{itemize}
+\item Built the infrastructure: highly available PostgreSQL/TimescaleDB and Airflow clusters, object storage for archival and Grafana for observability, with around 6~TB of time-series data currently flowing through the platform
+\item Built and operate roughly 80 Airflow pipelines that ingest, transfer and back up the data unattended every night
+\item Outcome: the regulator went from binary files nobody could read to queryable national spectrum data, with per-region dashboards and automated detection of unauthorized emissions, a direct regulatory function
+\end{itemize}
+
+\cvsection{AI \& Agentic Infrastructure (MCP)}
+Since early 2026 I build the bridge between AI assistants and production infrastructure using the Model Context Protocol. I author, fork and operate MCP servers that give Claude Code controlled access to the whole SysOps estate (oVirt/OLVM, PowerDNS, FreeIPA, phpIPAM, CheckMK, F5, AWX, Redfish/iDRAC, Pure Storage, vSphere, NetBox, Grafana, OCI, AWS); around 75 server instances, one per site or realm, all following the same safety model: read-only by default, opt-in writes, dry-run on every mutating tool, confirmation for destructive operations, no secrets in logs. On top of them I maintain Claude Code skills and domain subagents that encode runbooks and failure signatures.
+
+\cvsection{Side Projects}
+\cvevent{Cloud Migration of Monolithic Application}{}{}{}
+Planned and executed migration of a large on-premise monolithic application to the cloud. Designed a hybrid architecture with VMs, Kubernetes clusters, storage, and networking, balancing cost and scalability. Kept the on-premise test environment operational, sharing DNS through LMDB Lightstream technology without split-brain issues. Delivered a working hybrid environment with production in cloud and testing in datacenter.
+
+\cvevent{Self-Hosted Office Cloud: OpenStack + oVirt on 9 Bare-Metal Servers}{}{}{}
+Built and operate a self-hosted office cluster on nine bare-metal HP servers, six running OpenStack and three running oVirt, with Ceph as the storage backend. Performed everything end to end: hardware racking, OS installation, networking, storage configuration and VM lifecycle automation with Ansible and Terraform. On top of it run the team's core services: a self-hosted GitLab with dynamically scaling Kubernetes CI runners, HashiCorp Vault for secrets management, and the Grafana, Loki and Prometheus observability stack with alerting to Microsoft Teams. Public-facing services are protected behind Cloudflare (DDoS protection, WAF, caching), validated with simulated stress traffic and zero downtime.
+
+\cvevent{Forcepoint NGFW}{}{}{}
+Implemented Forcepoint Appliance for enterprise security, including deployment and configuration of DLP and Web Security modules. Installed and configured security agents on remote organization laptops to ensure policy enforcement, data protection, and safe web access across the workforce.
+
+\cvevent{RO Fishing Activities API Migration}{}{}{}
+Migrated the Romanian Fishing Activities API from legacy stack to a new implementation with FastAPI. Improved API performance, maintainability, and documentation with OpenAPI standards. Ensured backward compatibility for client systems while modernizing the codebase.
+
+\cvsection{Open Source Projects}
+
+{\small
+\textbf{oVirt MCP Server} \textcolor{PastelRed}{|} \href{https://github.com/puhamihai/ovirt-mcp-server}{github.com/puhamihai/ovirt-mcp-server}\\
+\textbf{Redfish MCP Server} \textcolor{PastelRed}{|} \href{https://github.com/puhamihai/redfish-mcp-server}{github.com/puhamihai/redfish-mcp-server}\\
+\textbf{PowerDNS MCP Server} \textcolor{PastelRed}{|} \href{https://github.com/puhamihai/pdns-mcp-server}{github.com/puhamihai/pdns-mcp-server}\\
+\textbf{FreeIPA MCP Server} \textcolor{PastelRed}{|} \href{https://github.com/puhamihai/ipa-mcp}{github.com/puhamihai/ipa-mcp}\\
+\textbf{Contributions} \textcolor{PastelRed}{|} \href{https://github.com/puhamihai/vibeMK}{github.com/puhamihai/vibeMK}, \href{https://github.com/InfraMCP/phpipam-mcp-server}{github.com/InfraMCP/phpipam-mcp-server}\\
+\textbf{x509 Certificate Exporter Role} \textcolor{PastelRed}{|} \href{https://github.com/puhamihai/x509_certificate_exporter}{github.com/puhamihai/x509\_certificate\_exporter}\\
+\textbf{oVirt Ansible Utils} \textcolor{PastelRed}{|} \href{https://github.com/puhamihai/ovirt-ansible-utils}{github.com/puhamihai/ovirt-ansible-utils}\\
+\textbf{oVirt Terraform Provider} \textcolor{PastelRed}{|} \href{https://github.com/puhamihai/terraform-provider-ovirt}{github.com/puhamihai/terraform-provider-ovirt}
+\par}
+
+\cvsection{AI \& Automation Interests}
+Currently building a smart home system that leverages speech-to-text and text-to-speech technologies to allow seamless voice-based interaction with AI agents, enabling hands-free control, querying, and automation of home devices and services through natural conversation.
+
+
+\end{document}
